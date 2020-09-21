@@ -28,73 +28,113 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormReceita));
-            this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtModoPreparo = new System.Windows.Forms.TextBox();
+            this.btnUpdate = new System.Windows.Forms.Button();
+            this.btnVoltaInicio = new System.Windows.Forms.Button();
+            this.txtNome = new System.Windows.Forms.TextBox();
+            this.txtIngredientes = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(13, 13);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(102, 18);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Pão de Queijo";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.label2.Location = new System.Drawing.Point(16, 47);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(16, 49);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(68, 13);
+            this.label2.Size = new System.Drawing.Size(81, 13);
             this.label2.TabIndex = 1;
             this.label2.Text = "Ingredientes:";
             // 
-            // label3
+            // txtModoPreparo
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(16, 72);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(127, 91);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "600g de água\r\n342g  de óleo\r\n311g de leite\r\n20g de sal\r\n1000 g de polvilho azedo\r" +
-    "\n300g de ovos\r\n150g de parmesão ralado";
+            this.txtModoPreparo.BackColor = System.Drawing.SystemColors.Control;
+            this.txtModoPreparo.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtModoPreparo.Location = new System.Drawing.Point(233, 33);
+            this.txtModoPreparo.Multiline = true;
+            this.txtModoPreparo.Name = "txtModoPreparo";
+            this.txtModoPreparo.Size = new System.Drawing.Size(408, 161);
+            this.txtModoPreparo.TabIndex = 3;
             // 
-            // textBox1
+            // btnUpdate
             // 
-            this.textBox1.Location = new System.Drawing.Point(233, 13);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(408, 178);
-            this.textBox1.TabIndex = 3;
-            this.textBox1.Text = resources.GetString("textBox1.Text");
+            this.btnUpdate.Location = new System.Drawing.Point(505, 206);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(136, 23);
+            this.btnUpdate.TabIndex = 4;
+            this.btnUpdate.Text = "Salvar alterações";
+            this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
+            // 
+            // btnVoltaInicio
+            // 
+            this.btnVoltaInicio.Location = new System.Drawing.Point(363, 206);
+            this.btnVoltaInicio.Name = "btnVoltaInicio";
+            this.btnVoltaInicio.Size = new System.Drawing.Size(136, 23);
+            this.btnVoltaInicio.TabIndex = 5;
+            this.btnVoltaInicio.Text = "Voltar";
+            this.btnVoltaInicio.UseVisualStyleBackColor = true;
+            this.btnVoltaInicio.Click += new System.EventHandler(this.btnVoltaInicio_Click);
+            // 
+            // txtNome
+            // 
+            this.txtNome.BackColor = System.Drawing.SystemColors.Control;
+            this.txtNome.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNome.Location = new System.Drawing.Point(16, 14);
+            this.txtNome.Name = "txtNome";
+            this.txtNome.Size = new System.Drawing.Size(208, 17);
+            this.txtNome.TabIndex = 6;
+            // 
+            // txtIngredientes
+            // 
+            this.txtIngredientes.BackColor = System.Drawing.SystemColors.Control;
+            this.txtIngredientes.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtIngredientes.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtIngredientes.Location = new System.Drawing.Point(19, 70);
+            this.txtIngredientes.Multiline = true;
+            this.txtIngredientes.Name = "txtIngredientes";
+            this.txtIngredientes.Size = new System.Drawing.Size(208, 154);
+            this.txtIngredientes.TabIndex = 7;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(229, 14);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(108, 13);
+            this.label1.TabIndex = 8;
+            this.label1.Text = "Modo de Preparo:";
             // 
             // FormReceita
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(653, 218);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
+            this.ClientSize = new System.Drawing.Size(653, 241);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.txtIngredientes);
+            this.Controls.Add(this.txtNome);
+            this.Controls.Add(this.btnVoltaInicio);
+            this.Controls.Add(this.btnUpdate);
+            this.Controls.Add(this.txtModoPreparo);
+            this.Controls.Add(this.label2);
             this.Name = "FormReceita";
             this.Text = "Minha Receita";
+            this.Load += new System.EventHandler(this.FormReceita_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtModoPreparo;
+        private System.Windows.Forms.Button btnUpdate;
+        private System.Windows.Forms.Button btnVoltaInicio;
+        private System.Windows.Forms.TextBox txtNome;
+        private System.Windows.Forms.TextBox txtIngredientes;
+        private System.Windows.Forms.Label label1;
     }
 }

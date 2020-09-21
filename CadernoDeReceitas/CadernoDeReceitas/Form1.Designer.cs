@@ -28,71 +28,77 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.btnNovaReceita = new System.Windows.Forms.Button();
+            this.btnDelete = new System.Windows.Forms.Button();
+            this.btnPesquisar = new System.Windows.Forms.Button();
+            this.btnExibeReceita = new System.Windows.Forms.Button();
+            this.txtBusca = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.txtCbOpcoesBusca = new System.Windows.Forms.ComboBox();
+            this.dgvListaReceitas = new System.Windows.Forms.DataGridView();
             this.Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Dificuldade = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvListaReceitas)).BeginInit();
             this.SuspendLayout();
             // 
-            // button1
+            // btnNovaReceita
             // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.btnNovaReceita.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.Location = new System.Drawing.Point(13, 12);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(290, 23);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Cadastrar nova receita";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnNovaReceita.Location = new System.Drawing.Point(13, 12);
+            this.btnNovaReceita.Name = "btnNovaReceita";
+            this.btnNovaReceita.Size = new System.Drawing.Size(290, 23);
+            this.btnNovaReceita.TabIndex = 0;
+            this.btnNovaReceita.Text = "Cadastrar nova receita";
+            this.btnNovaReceita.UseVisualStyleBackColor = true;
+            this.btnNovaReceita.Click += new System.EventHandler(this.btnNovaReceita_Click);
             // 
-            // button2
+            // btnDelete
             // 
-            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.btnDelete.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.button2.Location = new System.Drawing.Point(13, 127);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(142, 23);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Excluir receita";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnDelete.Location = new System.Drawing.Point(13, 127);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(142, 23);
+            this.btnDelete.TabIndex = 1;
+            this.btnDelete.Text = "Excluir receita";
+            this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
-            // button3
+            // btnPesquisar
             // 
-            this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button3.Location = new System.Drawing.Point(230, 83);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(73, 21);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "Pesquisar";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnPesquisar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnPesquisar.Location = new System.Drawing.Point(230, 83);
+            this.btnPesquisar.Name = "btnPesquisar";
+            this.btnPesquisar.Size = new System.Drawing.Size(73, 21);
+            this.btnPesquisar.TabIndex = 2;
+            this.btnPesquisar.Text = "Pesquisar";
+            this.btnPesquisar.UseVisualStyleBackColor = true;
+            this.btnPesquisar.Click += new System.EventHandler(this.btnPesquisar_Click);
             // 
-            // button4
+            // btnExibeReceita
             // 
-            this.button4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button4.Location = new System.Drawing.Point(170, 126);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(133, 23);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "Exibir receita";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnExibeReceita.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnExibeReceita.Location = new System.Drawing.Point(170, 126);
+            this.btnExibeReceita.Name = "btnExibeReceita";
+            this.btnExibeReceita.Size = new System.Drawing.Size(133, 23);
+            this.btnExibeReceita.TabIndex = 3;
+            this.btnExibeReceita.Text = "Exibir receita";
+            this.btnExibeReceita.UseVisualStyleBackColor = true;
+            this.btnExibeReceita.Click += new System.EventHandler(this.btnExibeReceita_Click);
             // 
-            // textBox1
+            // txtBusca
             // 
-            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.txtBusca.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox1.Location = new System.Drawing.Point(13, 57);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(290, 20);
-            this.textBox1.TabIndex = 4;
+            this.txtBusca.Location = new System.Drawing.Point(13, 57);
+            this.txtBusca.Name = "txtBusca";
+            this.txtBusca.Size = new System.Drawing.Size(290, 20);
+            this.txtBusca.TabIndex = 4;
             // 
             // label1
             // 
@@ -103,39 +109,72 @@
             this.label1.TabIndex = 5;
             this.label1.Text = "Buscar por:";
             // 
-            // comboBox1
+            // txtCbOpcoesBusca
             // 
-            this.comboBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.txtCbOpcoesBusca.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(79, 83);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(145, 21);
-            this.comboBox1.TabIndex = 6;
-            this.comboBox1.Text = "selecione uma opção";
+            this.txtCbOpcoesBusca.FormattingEnabled = true;
+            this.txtCbOpcoesBusca.Items.AddRange(new object[] {
+            "nome",
+            "ingrediente",
+            "dificuldade"});
+            this.txtCbOpcoesBusca.Location = new System.Drawing.Point(79, 83);
+            this.txtCbOpcoesBusca.Name = "txtCbOpcoesBusca";
+            this.txtCbOpcoesBusca.Size = new System.Drawing.Size(145, 21);
+            this.txtCbOpcoesBusca.TabIndex = 6;
+            this.txtCbOpcoesBusca.Text = "selecione uma opção";
             // 
-            // dataGridView1
+            // dgvListaReceitas
             // 
-            this.dataGridView1.AllowUserToResizeRows = false;
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.dgvListaReceitas.AllowUserToResizeRows = false;
+            this.dgvListaReceitas.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.Control;
-            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.ColumnHeadersVisible = false;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Nome});
-            this.dataGridView1.Location = new System.Drawing.Point(13, 162);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.Size = new System.Drawing.Size(290, 276);
-            this.dataGridView1.TabIndex = 7;
+            this.dgvListaReceitas.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.dgvListaReceitas.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvListaReceitas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvListaReceitas.ColumnHeadersVisible = false;
+            this.dgvListaReceitas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Nome,
+            this.Dificuldade,
+            this.id});
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvListaReceitas.DefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvListaReceitas.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
+            this.dgvListaReceitas.GridColor = System.Drawing.SystemColors.Control;
+            this.dgvListaReceitas.Location = new System.Drawing.Point(13, 162);
+            this.dgvListaReceitas.MultiSelect = false;
+            this.dgvListaReceitas.Name = "dgvListaReceitas";
+            this.dgvListaReceitas.ReadOnly = true;
+            this.dgvListaReceitas.RowHeadersVisible = false;
+            this.dgvListaReceitas.Size = new System.Drawing.Size(290, 276);
+            this.dgvListaReceitas.TabIndex = 7;
+            this.dgvListaReceitas.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvListaReceitas_CellClick);
             // 
             // Nome
             // 
             this.Nome.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Nome.HeaderText = "Nome";
             this.Nome.Name = "Nome";
+            this.Nome.ReadOnly = true;
+            // 
+            // Dificuldade
+            // 
+            this.Dificuldade.HeaderText = "dificuldade";
+            this.Dificuldade.Name = "Dificuldade";
+            this.Dificuldade.ReadOnly = true;
+            // 
+            // id
+            // 
+            this.id.HeaderText = "id";
+            this.id.Name = "id";
+            this.id.ReadOnly = true;
+            this.id.Visible = false;
             // 
             // groupBox1
             // 
@@ -166,17 +205,18 @@
             this.ClientSize = new System.Drawing.Size(317, 450);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.dgvListaReceitas);
+            this.Controls.Add(this.txtCbOpcoesBusca);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.txtBusca);
+            this.Controls.Add(this.btnExibeReceita);
+            this.Controls.Add(this.btnPesquisar);
+            this.Controls.Add(this.btnDelete);
+            this.Controls.Add(this.btnNovaReceita);
             this.Name = "Form1";
             this.Text = "Minhas Receitas";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.Form1_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvListaReceitas)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -184,17 +224,19 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button btnNovaReceita;
+        private System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.Button btnPesquisar;
+        private System.Windows.Forms.Button btnExibeReceita;
+        private System.Windows.Forms.TextBox txtBusca;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Nome;
+        private System.Windows.Forms.ComboBox txtCbOpcoesBusca;
+        private System.Windows.Forms.DataGridView dgvListaReceitas;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Nome;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Dificuldade;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id;
     }
 }
 

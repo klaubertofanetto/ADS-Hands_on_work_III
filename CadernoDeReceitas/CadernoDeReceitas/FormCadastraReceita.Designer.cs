@@ -32,11 +32,12 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.txtNome = new System.Windows.Forms.TextBox();
+            this.txtIngredientes = new System.Windows.Forms.TextBox();
+            this.txtModoPreparo = new System.Windows.Forms.TextBox();
+            this.btnInsert = new System.Windows.Forms.Button();
+            this.btnCancel = new System.Windows.Forms.Button();
+            this.txtCbDificuldade = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // label1
@@ -75,58 +76,77 @@
             this.label4.TabIndex = 3;
             this.label4.Text = "Modo de preparo:";
             // 
-            // textBox1
+            // txtNome
             // 
-            this.textBox1.Location = new System.Drawing.Point(16, 30);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(377, 20);
-            this.textBox1.TabIndex = 4;
+            this.txtNome.Location = new System.Drawing.Point(16, 30);
+            this.txtNome.Name = "txtNome";
+            this.txtNome.Size = new System.Drawing.Size(377, 20);
+            this.txtNome.TabIndex = 4;
             // 
-            // textBox2
+            // txtIngredientes
             // 
-            this.textBox2.Location = new System.Drawing.Point(16, 84);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(377, 20);
-            this.textBox2.TabIndex = 5;
-            // 
-            // textBox3
-            // 
-            this.textBox3.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.textBox3.Location = new System.Drawing.Point(16, 145);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(377, 65);
-            this.textBox3.TabIndex = 6;
-            this.textBox3.Text = "600g de água; 342g  de óleo; 311g de leite; 20g de sal; 1000g de polvilho azedo; " +
+            this.txtIngredientes.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.txtIngredientes.Location = new System.Drawing.Point(16, 145);
+            this.txtIngredientes.Multiline = true;
+            this.txtIngredientes.Name = "txtIngredientes";
+            this.txtIngredientes.Size = new System.Drawing.Size(377, 65);
+            this.txtIngredientes.TabIndex = 6;
+            this.txtIngredientes.Text = "600g de água; 342g  de óleo; 311g de leite; 20g de sal; 1000g de polvilho azedo; " +
     "300g de ovos; 150g de parmesão ralado";
+            this.txtIngredientes.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtIngredientes_MouseClick);
             // 
-            // textBox4
+            // txtModoPreparo
             // 
-            this.textBox4.Location = new System.Drawing.Point(16, 254);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(377, 152);
-            this.textBox4.TabIndex = 7;
+            this.txtModoPreparo.Location = new System.Drawing.Point(16, 254);
+            this.txtModoPreparo.Multiline = true;
+            this.txtModoPreparo.Name = "txtModoPreparo";
+            this.txtModoPreparo.Size = new System.Drawing.Size(377, 152);
+            this.txtModoPreparo.TabIndex = 7;
             // 
-            // button1
+            // btnInsert
             // 
-            this.button1.Location = new System.Drawing.Point(275, 423);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(118, 23);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "Salvar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnInsert.Location = new System.Drawing.Point(275, 423);
+            this.btnInsert.Name = "btnInsert";
+            this.btnInsert.Size = new System.Drawing.Size(118, 23);
+            this.btnInsert.TabIndex = 8;
+            this.btnInsert.Text = "Salvar";
+            this.btnInsert.UseVisualStyleBackColor = true;
+            this.btnInsert.Click += new System.EventHandler(this.btnInsert_Click);
+            // 
+            // btnCancel
+            // 
+            this.btnCancel.Location = new System.Drawing.Point(151, 423);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(118, 23);
+            this.btnCancel.TabIndex = 9;
+            this.btnCancel.Text = "Cancelar";
+            this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            // 
+            // txtCbDificuldade
+            // 
+            this.txtCbDificuldade.FormattingEnabled = true;
+            this.txtCbDificuldade.Items.AddRange(new object[] {
+            "Fácil",
+            "Média",
+            "Difícil"});
+            this.txtCbDificuldade.Location = new System.Drawing.Point(16, 87);
+            this.txtCbDificuldade.Name = "txtCbDificuldade";
+            this.txtCbDificuldade.Size = new System.Drawing.Size(377, 21);
+            this.txtCbDificuldade.TabIndex = 10;
+            this.txtCbDificuldade.Text = "Selecione a dificuldade";
             // 
             // FormCadastraReceita
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(412, 466);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtCbDificuldade);
+            this.Controls.Add(this.btnCancel);
+            this.Controls.Add(this.btnInsert);
+            this.Controls.Add(this.txtModoPreparo);
+            this.Controls.Add(this.txtIngredientes);
+            this.Controls.Add(this.txtNome);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -144,10 +164,11 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox txtNome;
+        private System.Windows.Forms.TextBox txtIngredientes;
+        private System.Windows.Forms.TextBox txtModoPreparo;
+        private System.Windows.Forms.Button btnInsert;
+        private System.Windows.Forms.Button btnCancel;
+        private System.Windows.Forms.ComboBox txtCbDificuldade;
     }
 }
