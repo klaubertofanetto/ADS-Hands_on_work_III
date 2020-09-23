@@ -41,31 +41,38 @@ namespace CadernoDeReceitas
 
         private void btnInsert_Click(object sender, EventArgs e)
         {
-            ConexaoDB conecta = new ConexaoDB();
-            try
+            if (txtIngredientes.ForeColor != Color.Black)
             {
-                MySqlConnection dbConnection = conecta.connectDB();
-                MySqlCommand sqlSyntax = dbConnection.CreateCommand();
-                sqlSyntax.CommandText = "INSERT INTO `cadernoreceitas`.`receitas` " +
-                    "(`nome`, `dificuldade`, `ingrediente`, `modoPreparo`) " +
-                    "VALUES " +
-                    "('"+ txtNome.Text + "', '"+ txtCbDificuldade.SelectedItem.ToString() + "', '"+ txtIngredientes.Text +"', '"+ txtModoPreparo.Text +"');";
-                sqlSyntax.ExecuteNonQuery();
-
-                dbConnection.Close();
-                MessageBox.Show("Inserido com sucesso");
-
-                voltaJanelaInicial();
-
+                MessageBox.Show("Preencha a lista de ingredientes");
             }
-            catch (NullReferenceException)
-            {
-                MessageBox.Show("Preencha todos os campos");
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex);
-                MessageBox.Show("conexão falhou");
+            else 
+            { 
+                ConexaoDB conecta = new ConexaoDB();
+                try
+                {
+                    MySqlConnection dbConnection = conecta.connectDB();
+                    MySqlCommand sqlSyntax = dbConnection.CreateCommand();
+                    sqlSyntax.CommandText = "INSERT INTO `cadernoreceitas`.`receitas` " +
+                        "(`nome`, `dificuldade`, `ingrediente`, `modoPreparo`) " +
+                        "VALUES " +
+                        "('"+ txtNome.Text + "', '"+ txtCbDificuldade.SelectedItem.ToString() + "', '"+ txtIngredientes.Text +"', '"+ txtModoPreparo.Text +"');";
+                    sqlSyntax.ExecuteNonQuery();
+
+                    dbConnection.Close();
+                    MessageBox.Show("Inserido com sucesso");
+
+                    voltaJanelaInicial();
+
+                }
+                catch (NullReferenceException)
+                {
+                    MessageBox.Show("Preencha todos os campos");
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex);
+                    MessageBox.Show("conexão falhou");
+                }
             }
         }
 

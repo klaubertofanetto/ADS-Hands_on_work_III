@@ -149,6 +149,7 @@ private void FormExibirReceita()
 
                         MySqlDataReader reader = sqlSyntax.ExecuteReader();
                         dgvListaReceitas.Rows.Clear();
+                        txtBusca.Text = "";
 
                         while (reader.Read())
                         {

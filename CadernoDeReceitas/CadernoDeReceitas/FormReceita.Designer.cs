@@ -41,7 +41,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(16, 49);
+            this.label2.Location = new System.Drawing.Point(13, 59);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(81, 13);
             this.label2.TabIndex = 1;
@@ -49,17 +49,21 @@
             // 
             // txtModoPreparo
             // 
+            this.txtModoPreparo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtModoPreparo.BackColor = System.Drawing.SystemColors.Control;
             this.txtModoPreparo.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtModoPreparo.Location = new System.Drawing.Point(233, 33);
+            this.txtModoPreparo.Location = new System.Drawing.Point(276, 33);
             this.txtModoPreparo.Multiline = true;
             this.txtModoPreparo.Name = "txtModoPreparo";
-            this.txtModoPreparo.Size = new System.Drawing.Size(408, 161);
+            this.txtModoPreparo.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.txtModoPreparo.Size = new System.Drawing.Size(430, 257);
             this.txtModoPreparo.TabIndex = 3;
             // 
             // btnUpdate
             // 
-            this.btnUpdate.Location = new System.Drawing.Point(505, 206);
+            this.btnUpdate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnUpdate.Location = new System.Drawing.Point(570, 302);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(136, 23);
             this.btnUpdate.TabIndex = 4;
@@ -69,7 +73,8 @@
             // 
             // btnVoltaInicio
             // 
-            this.btnVoltaInicio.Location = new System.Drawing.Point(363, 206);
+            this.btnVoltaInicio.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnVoltaInicio.Location = new System.Drawing.Point(428, 302);
             this.btnVoltaInicio.Name = "btnVoltaInicio";
             this.btnVoltaInicio.Size = new System.Drawing.Size(136, 23);
             this.btnVoltaInicio.TabIndex = 5;
@@ -83,8 +88,9 @@
             this.txtNome.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNome.Location = new System.Drawing.Point(16, 14);
+            this.txtNome.Multiline = true;
             this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(208, 17);
+            this.txtNome.Size = new System.Drawing.Size(232, 42);
             this.txtNome.TabIndex = 6;
             // 
             // txtIngredientes
@@ -92,17 +98,19 @@
             this.txtIngredientes.BackColor = System.Drawing.SystemColors.Control;
             this.txtIngredientes.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtIngredientes.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtIngredientes.Location = new System.Drawing.Point(19, 70);
+            this.txtIngredientes.Location = new System.Drawing.Point(16, 80);
             this.txtIngredientes.Multiline = true;
             this.txtIngredientes.Name = "txtIngredientes";
-            this.txtIngredientes.Size = new System.Drawing.Size(208, 154);
+            this.txtIngredientes.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.txtIngredientes.Size = new System.Drawing.Size(232, 245);
             this.txtIngredientes.TabIndex = 7;
             // 
             // label1
             // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(229, 14);
+            this.label1.Location = new System.Drawing.Point(273, 13);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(108, 13);
             this.label1.TabIndex = 8;
@@ -112,7 +120,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(653, 241);
+            this.ClientSize = new System.Drawing.Size(718, 337);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtIngredientes);
             this.Controls.Add(this.txtNome);
