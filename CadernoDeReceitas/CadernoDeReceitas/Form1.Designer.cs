@@ -42,6 +42,7 @@
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnRrefresh = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListaReceitas)).BeginInit();
             this.SuspendLayout();
             // 
@@ -152,7 +153,7 @@
             this.dgvListaReceitas.Name = "dgvListaReceitas";
             this.dgvListaReceitas.ReadOnly = true;
             this.dgvListaReceitas.RowHeadersVisible = false;
-            this.dgvListaReceitas.Size = new System.Drawing.Size(290, 276);
+            this.dgvListaReceitas.Size = new System.Drawing.Size(290, 260);
             this.dgvListaReceitas.TabIndex = 7;
             this.dgvListaReceitas.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvListaReceitas_CellClick);
             // 
@@ -198,11 +199,22 @@
             this.groupBox2.TabIndex = 9;
             this.groupBox2.TabStop = false;
             // 
+            // btnRrefresh
+            // 
+            this.btnRrefresh.Location = new System.Drawing.Point(193, 415);
+            this.btnRrefresh.Name = "btnRrefresh";
+            this.btnRrefresh.Size = new System.Drawing.Size(109, 23);
+            this.btnRrefresh.TabIndex = 10;
+            this.btnRrefresh.Text = "Atualizar lista";
+            this.btnRrefresh.UseVisualStyleBackColor = true;
+            this.btnRrefresh.Click += new System.EventHandler(this.btnRrefresh_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(317, 450);
+            this.Controls.Add(this.btnRrefresh);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dgvListaReceitas);
@@ -237,6 +249,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Nome;
         private System.Windows.Forms.DataGridViewTextBoxColumn Dificuldade;
         private System.Windows.Forms.DataGridViewTextBoxColumn id;
+        private System.Windows.Forms.Button btnRrefresh;
     }
 }
 

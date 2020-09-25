@@ -23,6 +23,8 @@ namespace CadernoDeReceitas
 
         private void btnVoltaInicio_Click(object sender, EventArgs e)
         {
+            SelectedID.idSelected = null;
+            SelectedID.nomeSelected = null;
             voltaJanelaInicial();
         }
 
@@ -52,6 +54,8 @@ namespace CadernoDeReceitas
                 dbConnection.Close();
                 MessageBox.Show("Alterado com sucesso");
 
+                SelectedID.idSelected = null;
+                SelectedID.nomeSelected = null;
                 voltaJanelaInicial();
 
             }

@@ -25,6 +25,8 @@ namespace CadernoDeReceitas
 
         private void btnNovaReceita_Click(object sender, EventArgs e)
         {
+            SelectedID.idSelected = null;
+            SelectedID.nomeSelected = null;
             this.Close(); // opcional
             newThread = new Thread(FormCadastrarNova);
             newThread.SetApartmentState(ApartmentState.STA);
@@ -118,6 +120,8 @@ private void FormExibirReceita()
                         MessageBox.Show("Receita de "+ SelectedID.nomeSelected+" excluída!");
 
                         updateList();
+                        SelectedID.idSelected = null;
+                        SelectedID.nomeSelected = null;
 
                     }
                     catch (Exception ex)
@@ -163,6 +167,8 @@ private void FormExibirReceita()
 
                         }
                         dbConnection.Close();
+                        SelectedID.idSelected = null;
+                        SelectedID.nomeSelected = null;
 
                     }
                     catch (Exception ex)
@@ -170,6 +176,8 @@ private void FormExibirReceita()
                         Console.WriteLine(ex);
                         MessageBox.Show("falha ao carregar tabela");
                     }
+                   
+                    
                 } else
                 {
                     MessageBox.Show("Preencha o campo de pesquisa com uma palavra-chave");
@@ -179,6 +187,8 @@ private void FormExibirReceita()
             {
                 MessageBox.Show("Selecione o método para pesquisa!");
             }
+
+            dgvListaReceitas.ClearSelection();
         }
 
         private void dgvListaReceitas_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -187,6 +197,11 @@ private void FormExibirReceita()
             String newId = dgvListaReceitas.Rows[e.RowIndex].Cells["id"].FormattedValue.ToString();
             SelectedID.idSelected = newId;
             SelectedID.nomeSelected = dgvListaReceitas.Rows[e.RowIndex].Cells["nome"].FormattedValue.ToString();
+        }
+
+        private void btnRrefresh_Click(object sender, EventArgs e)
+        {
+            updateList();
         }
     }
 
